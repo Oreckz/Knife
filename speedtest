@@ -1,0 +1,4 @@
+#! /bin/bash
+#Simple 500mb download speed test
+
+wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip

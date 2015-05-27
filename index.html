@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+  <title>knife.so - Chop chop!</title>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <style type="text/css">
+    body {
+      font-family: monospace;
+      font-size: 12px;
+      background-color: #FFFFFF;
+      color: #008080;
+      margin: 20px 10px 0px 20px;
+      column-width: auto;
+      text-align: left;
+    }
+  </style>  
+</head>
+<body>
+    <h1> Welcome to Knife!</h1>
+
+    <h2><u>What is Knife?</u></h2>
+    <p>Knife is a collection of commands and scripts designed for use with the CentOS operating system. <br>
+    Currently Knife only has three commands as I literally made this yesterday. <br>
+    The below commands are accessed from the Linux terminal using curl with the URLs specified below. <br>
+    For example curl knife.so/phpinfo.</p>
+
+    <h3><u>WordPress Version Checker - knife.so/wordpress</u></h3>
+    <p>A short Bash script that will return the latest version of the WordPress CMS and show you the <br>
+    versions installed on the server. Requires the mlocate package to work. Run this with curl knife.so/wordpress | sh.<br>
+    Alternatively you can pop it into a file if you don't want to blindly run code on your server, which is sensible. </p>
+
+    <h3><u>DDoS Deflate - knife.so/deflate</u></h3>
+    <p>The same script that can be found at <a href="http://deflate.medialayer.com/" target="_blank">deflate.medialayer.com</a> I just
+    wanted it to be more easily accessible from the command line.<br>Returns the command found on the link above.  </p>
+
+    <h3><u>PHP Info page - knife.so/phpinfo</u></h3>
+    <p>Returns the phpinfo() function in PHP tags because I can never remember the syntax.</p>
+
+    <h3><u>Speedtest - knife.so/speedtest</u></h3>
+    <p>A simple 500Mb speedtest that outputs to /dev/null.</p>    
+
+    <h3><u>Thought this was a Chef site?</u></h3>
+    <p><a href="https://docs.chef.io/config_rb_knife.html" target="_blank">You were probably looking for knife.rb</a></p>
+</body>

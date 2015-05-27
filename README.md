@@ -1,2 +1,2 @@
-# knife
-knife.so
+# Knife.so
+Because I would rather curl something than copy and paste it from my Evernote. 

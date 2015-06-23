@@ -1,0 +1,11 @@
+#!/bin/bash
+#Created by Patrick Birchall - https://github.com/Oreckz
+#Inspired by CarlP & LeeS
+#Check for Wordpress versions on server and current version
+#e.g. curl knife.so/wordpress | sh
+
+echo "The current version of WordPress is: "
+curl  http://api.wordpress.org/core/version-check/1.1/ -silent | tail -1 #query wordpress API for latest release
+printf "\n"
+echo "The following versions were found on the server"
+for i in $(locate version.php | grep wp-includes); do grep -H "wp_version = " ${i}; done #loop through all wp installs and output version

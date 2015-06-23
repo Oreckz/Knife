@@ -4,8 +4,13 @@
 #Check for Wordpress versions on server and current version
 #e.g. curl knife.so/wordpress | sh
 
+#First we set up some variables - like the version number oulled from the API
+ver=$(curl  http://api.wordpress.org/core/version-check/1.1/ -silent | tail -1)
+GREEN='\033[1;31m'
+NC='\033[0m' # No Color
+#Then we output the current version and check our installs against it
 echo "The current version of WordPress is: "
-curl  http://api.wordpress.org/core/version-check/1.1/ -silent | tail -1 #query wordpress API for latest release
+printf "${GREEN}$ver${NC}"
 printf "\n"
-echo "The following versions were found on the server"
-for i in $(locate version.php | grep wp-includes); do grep -H "wp_version = " ${i}; done #loop through all wp installs and output version
+echo "The following outdated versions were found on the server"
+for i in $(locate version.php | grep wp-includes); do grep -H "wp_version = " ${i}; done | grep -v "$ver" #loop through all wp installs and output version

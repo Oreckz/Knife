@@ -15,11 +15,11 @@
   </style>  
 </head>
 <body>
-    <h1> Welcome to Knife!</h1>
+    <h1> Welcome to Knife! (BETA)</h1>
 
     <h2><u>What is Knife?</u></h2>
     <p>Knife is a collection of commands and scripts designed for use with the CentOS operating system. <br>
-    Currently Knife only has four commands as I literally made this yesterday. <br>
+    I'm always trying to add more things, if you have a suggestion let me know. <br>
     The below commands are accessed from the Linux terminal using curl with the URLs specified below. <br>
     For example curl knife.so/phpinfo.</p>
 
@@ -37,6 +37,15 @@
 
     <h3><u>Speedtest - knife.so/speedtest</u></h3>
     <p>A simple 500Mb speedtest that outputs to /dev/null.</p>    
+
+    <h3><u>Exim spam checker - knife.so/eximspam</u></h3>
+    <p>Scans the exim_mainlog and returns spamming scripts</p>
+
+    <h3><u>Postfix spam checker - knife.so/postfixspam</u></h3>
+    <p>Scans /var/spool/postfix and returns spamming scripts</p>
+
+    <h3><u>Show all crons - knife.so/allcron</u></h3>
+    <p>Loops through users in /etc/passwd and lists their crontab</p>
 
     <h3><u>Thought this was a Chef site?</u></h3>
     <p><a href="https://docs.chef.io/config_rb_knife.html" target="_blank">You were probably looking for knife.rb</a></p>

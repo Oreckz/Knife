@@ -1,0 +1,1 @@
+ find /var/spool/postfix -type f -exec grep --null-data -i "X-PHP" {} \; | strings -a | grep -o "X-PHP-Originating-Script.*" | awk '{print $1, $2}' | sort | uniq -c | sort -gr | head -10

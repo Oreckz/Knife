@@ -10,7 +10,7 @@ GREEN='\033[1;31m'
 NC='\033[0m' # No Color
 #Then we output the current version and check our installs against it
 echo "The current version of WordPress is: "
-printf "${GREEN}$ver${NC}"
+printf "$ver"
 printf "\n"
 echo "The following outdated versions were found on the server"
 for i in $(locate version.php | grep wp-includes); do grep -H "wp_version = " ${i}; done | grep -v "$ver" #loop through all wp installs and output version

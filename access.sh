@@ -1,3 +1,4 @@
+#Not by me, just included here for ease of use. 
 #!/bin/bash
 if [ "$1" = "w" ]; then
 	locate wp-includes/version.php | xargs grep -H '^$wp_version' | grep -v virtfs
